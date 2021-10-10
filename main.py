@@ -39,9 +39,9 @@ def get_longest_same_bit_counts(lst: list[int]) -> list[int]:
 
 
 def test_get_longest_same_bit_counts():
-    assert(get_longest_all_perfect_squares([2, 4, 8, 32, 64])) == [2, 4, 8, 32, 64]
-    assert(get_longest_all_perfect_squares([2, 4, 8, 3, 64])) == []
-    assert(get_longest_all_perfect_squares([2, 4, 8, 32, 64, 256, 1048576])) == [2, 4, 8, 32, 64, 256, 1048576]
+    assert(get_longest_same_bit_counts([2, 4, 8, 32, 64])) == [2, 4, 8, 32, 64]
+    assert(get_longest_same_bit_counts([2, 4, 8, 3, 64])) == []
+    assert(get_longest_same_bit_counts([2, 4, 8, 32, 64, 256, 1048576])) == [2, 4, 8, 32, 64, 256, 1048576]
 
 def secv_same_bit_counts(lst: list[int]):
     lista_secventa = []
@@ -85,5 +85,7 @@ def main():
             print(
                 f"Cea mai lunga subsecventa de numere care au acelasi numar de biti de 1 este: {secv_same_bit_counts(lista)}")
 
+
+test_get_longest_same_bit_counts()
 test_get_longest_all_perfect_squares()
 main()
