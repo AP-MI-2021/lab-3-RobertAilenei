@@ -72,8 +72,7 @@ def main():
     while True:
         print("1.Citire lista")
         print("2.Determinare cea mai lungă subsecvență cu proprietatea: Toate numerele sunt pătrate perfecte.")
-        print(
-            "3.Determinare cea mai lungă subsecvență cu proprietatea: Toate numerele au același număr de biți de 1 în reprezentarea binară.")
+        print("3.Determinare cea mai lungă subsecvență cu proprietatea: Toate numerele au același număr de biți de 1 în reprezentarea binară.")
         print("x.")
 
         optiune = input("Alege optiunea: ")
@@ -82,8 +81,10 @@ def main():
         elif optiune == "2":
             print(f"Cea mai lunga subsecventa de numere patrate perfecte este: {secv_perfect_squares(lista)} ")
         elif optiune == "3":
-            print(
-                f"Cea mai lunga subsecventa de numere care au acelasi numar de biti de 1 este: {secv_same_bit_counts(lista)}")
+            print(f"Cea mai lunga subsecventa de numere care au acelasi numar de biti de 1 este: {secv_same_bit_counts(lista)}")
+        elif optiune == "x":
+            break
+
 
 
 test_get_longest_same_bit_counts()
