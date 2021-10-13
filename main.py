@@ -3,6 +3,10 @@ from typing import List
 
 
 def get_longest_all_perfect_squares(lst: list[int]) -> list[int]:
+    '''
+    :param lst:Functia primeste ca parametru o lista de tip int
+    :return: Functia returneaza o lista goala in cazul in care exista un numar care nu este patrat perfect si lista intreaga in care toate numerele sunt patrate perfecte
+    '''
     for start in range(0, len(lst)):
         if lst[start] != math.sqrt(lst[start]) * math.sqrt(lst[start]):
             return []
@@ -32,6 +36,11 @@ def secv_perfect_squares(lst: list[int]):
 
 def get_longest_same_bit_counts(lst: list[int]) -> list[int]:
     # https://stackoverflow.com/questions/9829578/fast-way-of-counting-non-zero-bits-in-positive-integer
+    """
+
+    :param lst: Functia primeste ca parametru o lista de tip int
+    :return: Functia returneaza o lista goala in cazul in care numerele nu au acelasi numar de biti de 1 si lista intreaga daca toate elementele din lista au acelasi numar de biti de 1
+    """
     first_nr_bit_count = lst[0].bit_count()
     for start in range(1, len(lst)):
         if lst[start].bit_count()!= first_nr_bit_count:
@@ -70,6 +79,11 @@ def citire_lista():
 
 def get_longest_same_div_count(lst: list[int]) -> list[int]:
     # https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-24.php
+    '''
+
+    :param lst: Functia primeste ca parametru o lista de tip int
+    :return: Functia returneaza o lista goala in cazul in care se gaseste un element care nu are acelasi numar de divizori ca celelalte din lista si toata lista in cazul in care toate elementele din lista au acelasi numar de divizori
+    '''
     div_count_fn= len([i for i in range(1, lst[0]+1) if not lst[0] % i])
     for start in range(1,len(lst)):
         if len([i for i in range(1, lst[start]+1) if not lst[start] % i]) != div_count_fn:
